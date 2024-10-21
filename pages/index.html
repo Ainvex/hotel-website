@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../Assets/css/style.css">
+</head>
+<body>
+  <!-- ===============Booking FORM====== -->
+  <section class="book">
+    <div class="container flex_space">
+      <div class="text">
+        <h1> <span>Book </span> Your Rooms </h1>
+      </div>
+      <div class="form">
+        <form class="grid">
+          <input type="date" placeholder="Araival Date">
+          <input type="date" placeholder="Departure Date">
+          <input type="number" placeholder="Adults">
+          <input type="number" placeholder="Childern">
+          <input type="submit" value="CHECK AVAILABILITY">
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- ===============Booking FORM====== -->
+  <header>
+    <style>
+      header {
+        background: #fff;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+    header .logo {
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+    header nav ul {
+        display: flex;
+    }
+    header nav ul li a {
+        display: inline-block;
+        color: #000;
+        padding: 5px 0;
+        margin: 0 10px;
+        border: 3px solid transparent;
+        text-transform: uppercase;
+        transition: 0.2s;
+    }
+    header nav ul li a:hover,
+    header nav ul li a.active {
+        border-bottom-color: dodgerblue;
+    }
+    .hamburger {
+        cursor: pointer;
+        display: none;
+    }a
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        margin: 5px 0;
+        background: #000;
+    }
+    @media only screen and (max-width: 900px) {
+        header {
+            padding: 0 30px;
+        }
+    }
+    @media only screen and (max-width: 700px) {
+        .hamburger {
+            display: block;
+        }
+        header nav {
+            position: absolute;
+            width: 100%;
+            left: -100%;
+            top: 70px;
+            width: 100%;
+            background: #fff;
+            padding: 30px;
+            transition: 0.3s;
+        }
+        header #nav_check:checked ~ nav {
+            left: 0;
+        }
+        header nav ul {
+            display: block;
+        }
+        header nav ul li a {
+            margin: 5px 0;
+        }
+    }
+    .logo{
+              width: 20px;
+    }
+    </style>
+    <div class="logo"><img src="../Assets/hotelimg/logo.png" alt="" ></div>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+        <ul>
+            <li>
+                <a href="./index.html" class="active">Home</a>
+            </li>
+            <li>
+                <a href="./specials.html">SPECIALS</a>
+            </li>
+            <li>
+                <a href="./BLOG.html">Blog</a>
+            </li>
+            <li>
+                <a href="./specials.html">Services</a>
+            </li>
+            <li>
+                <a href="./BOKING.html">Booking</a>
+            </li>
+            <li>
+                <a href="./contact.html">ContactUs</a>
+            </li>
+        </ul>
+    </nav>
+    <label for="nav_check" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+</header>
+      <section class="rooms">
+        <div class="container top">
+          <div class="heading">
+            <h1 >WELCOME</h1>
+            <h2>Our Rooms</h2>
+            <p class="section__header">Your journey starts here
+            </p>
+          </div>
+    
+          <!-- <div class="content mtop">
+            <div class="owl-carousel owl-carousel1 owl-theme">
+              <div class="items">
+                <div class="image">
+                  <img src="../Assets/hotelimg/room-1.png" alt="">
+                </div>
+                <div class="text">
+                  <h2>Suporior Rooms</h2>
+                  <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>Explore a wide range of properties tailored to suit your unique lifestyle
+                  </p>
+                  <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                    <h3>$250 <span> <br> Per Night </span> </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="image">
+                  <img src="../Assets/hotelimg/room-2.png" alt="">
+                </div>
+                <div class="text">
+                  <h2>Suporior Rooms</h2>
+                  <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>Find your perfect room with ease. Whether you’re seeking a private oasis or a shared living experience, our curated selection of rooms offers something for everyone. Filter by location, price, amenities, and more to find the ideal space that suits your needs and lifestyle. </p>
+                  <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                    <h3>$250 <span> <br> Per Night </span> </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="image">
+                  <img src="../Assets/hotelimg/room-3.png" alt="">
+                </div>
+                <div class="text">
+                  <h2>Suporior Rooms</h2>
+                  <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>Experience your future home like never before with our immersive virtual tours. Walk through properties from the comfort of your own space and get a feel for the layout, design, and ambiance. Our state-of-the-art virtual tours bring every detail to life, making it easier for you to decide if a property is the right fit</p>
+                  <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                    <h3>$250 <span> <br> Per Night </span> </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="image">
+                  <img src="../Assets/hotelimg/room-4.png" alt="">
+                </div>
+                <div class="text">
+                  <h2>Suporior Rooms</h2>
+                  <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>Join a network of trusted professionals dedicated to helping people find their dream homes and careers</p>
+                  <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                    <h3>$250 <span> <br> Per Night </span> </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="image">
+                  <img src="../Assets/hotelimg/room-5.png" alt="">
+                </div>
+                <div class="text">
+                  <h2>Suporior Rooms</h2>
+                  <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>Your perfect match is just a click away.
+                  </p>
+                  <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                    <h3>$250 <span> <br> Per Night </span> </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="image">
+                  <img src="../Assets/hotelimg/room-6.png" alt="">
+                </div>
+                <div class="text">
+                  <h2>Suporior Rooms</h2>
+                  <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>Become a member today and unlock exclusive benefits designed to enhance your home and job search experience. From priority access to new listings to personalized job recommendations and discounted services, our membership offers you more value and convenience. Sign up now to start enjoying all the perks.
+                  </p>
+                  <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                    <h3>$250 <span> <br> Per Night </span> </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="image">
+                  <img src="images/room-7.png" alt="">
+                </div>
+                <div class="text">
+                  <h2>Suporior Rooms</h2>
+                  <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+                  </p>
+                  <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                    <h3>$250 <span> <br> Per Night </span> </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="items">
+                <div class="image">
+                  <img src="images/room-8.png" alt="">
+                </div>
+                <div class="text">
+                  <h2>Suporior Rooms</h2>
+                  <div class="rate flex">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+                  </p>
+                  <div class="button flex">
+                    <button class="primary-btn">BOOK NOW</button>
+                    <h3>$250 <span> <br> Per Night </span> </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+      <section class="section__container banner__container" id="special">
+        <div class="banner__card">
+          <p>Your new home, a click away</p>
+          <h4>Membership has its perks</h4>
+        </div>
+        <div class="banner__card">
+          <p>Experience properties like never before</p>
+          <h4>MORE FUN<br />MORE TASTE</h4>
+        </div>
+        <div class="banner__card">
+          <p>See it to believe it</p>
+          <h4>Together, we achieve more</h4>
+        </div>
+      </section>
+  
+
+      <section id="features" class="section-p1">
+        <!-- <div class="f-box">
+          <img src="../Assets/features/f1.png" alt="free shipping" />
+          <h6>Free shipping</h6>
+        </div> -->
+        <div class="f-box">
+          <img src="../Assets/features/f2.png" alt="online order" />
+          <h6>Book online</h6>
+        </div>
+        <div class="f-box">
+          <img src="../Assets/features/f3.png" alt="save money" />
+          <h6>save money</h6>
+        </div>
+        <div class="f-box">
+          <img src="../Assets/features/f4.png" alt="promotions" />
+          <h6>promotions</h6>
+        </div>
+       
+        <div class="f-box">
+          <img src="../Assets/features/f6.png" alt="24/7 support" />
+          <h6>24/7 support</h6>
+        </div>
+        
+      <style>
+    
+        @media only screen and (min-width: 900px) {
+          #features {
+              display:grid;
+              gap: 1rem;
+              grid-auto-rows: 200px;
+          }
+      }
+        #features {
+          display: flex;
+          gap: 1rem;
+          grid-auto-rows: 200px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.8%;
+        }
+        #features .f-box {
+          width: 180px;
+          text-align: center;
+          padding: 25px 15px;
+          box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+          border: 1px solid #cce7d0;
+          border-radius: 4px;
+          margin: 15px 0;
+          transition: box-shadow 0.3s;
+        }
+        #features .f-box:hover {
+          box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
+        }
+        #features .f-box img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        #features .f-box h6 {
+          display: inline-block;
+          padding: 9px 8px 6px 8px;
+          line-height: 1;
+          font-size: 14px;
+          border-radius: 4px;
+          color: #088178;
+          background-color: #fddde4;
+        }
+        #features .f-box:nth-child(2) h6 {
+          background-color: #cdebbc;
+        }
+        #features .f-box:nth-child(3) h6 {
+          background-color: #d1e8f2;
+        }
+        #features .f-box:nth-child(4) h6 {
+          background-color: #cdd4f8;
+        }
+        #features .f-box:nth-child(5) h6 {
+          background-color: #f6dbf6;
+        }
+
+        
+        #features .f-box:nth-child(6) h6 {
+          background-color: #f7c089;
+        }
+      </style>
+      </section>
+      
+      <section class="section__container order__container" id="menu">
+        <h3>Secure your spot with ease</h3>
+        <h2 class="section__header">Green living starts here</h2>
+        <p class="section__description">
+         Discover our commitment to sustainability and green living. From eco-friendly properties to energy-efficient practices, we strive to make a positive impact on the environment. Learn more about our initiatives and how you can contribute to a greener future
+</p>
+        <div class="order__grid">
+          <div class="order__card">
+            <img src="../Assets/hotelimg/room-6.png" alt="order" />
+            <h4>Your new home is just a click away</h4>
+            <p>
+             Ready to secure your next home? Our booking page makes it easy to schedule viewings, apply for rentals, or finalize your new job placement. With just a few clicks, you can confirm your appointment and start your journey towards a new living space
+            </p>
+            <button class="btn">ORDER NOW</button>
+          </div>
+          <div class="order__card">
+            <img src="../Assets/hotelimg/room-3.png" alt="order" />
+            <h4>Engage, enjoy, and explore</h4>
+            <p>
+             Get involved in your community with our calendar of local events. From networking meetups to cultural festivals, find opportunities to connect, engage, and enjoy your surroundings. Stay updated on upcoming events and make the most of your community experience
+            </p>
+            <button class="btn">ORDER NOW</button>
+          </div>
+          <div class="order__card">
+            <img src="../Assets/hotelimg/room-4.png" alt="order" />
+            <h4>We handle the details, you enjoy the results</h4>
+            <p>
+             Let us handle the details with our comprehensive property management services. From maintenance requests to tenant communications, our team ensures that every aspect of property management is handled professionally and efficiently
+            </p>
+            <button class="btn">ORDER NOW</button>
+          </div>
+        </div>
+      </section>
+  
+      <section class="section__container event__container" id="event">
+        <div class="event__content">
+          <div class="event__image">
+            <img src="../Assets/hotelimg/banner-3.png" alt="event" />
+          </div>
+          <div class="event__details">
+            <h3>Discover</h3>
+            <h2 class="section__header">UPCOMING EVENTS</h2>
+            <p class="section__description">
+            Discover our commitment to sustainability and green living. From eco-friendly properties to energy-efficient practices, we strive to make a positive impact on the environment. Learn more about our initiatives and how you can contribute to a greener future</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="reservation" id="contact">
+        <div class="section__container reservation__container" style="background-image:url(../Assets/hotelimg/banner-1.png) ;">
+          <h3>RESERVATION</h3>
+          <h2 class="section__header">BOOK YOUR ROOM'S</h2>
+          <form action="/">
+            <input type="text" placeholder="NAME" />
+            <input type="email" placeholder="EMAIL" />
+            <input type="date" placeholder="DATE" />
+            <input type="time" placeholder="TIME" />
+            <input type="number" placeholder="PEOPLE" />
+            <button class="btn" type="submit">FIND ROOM'S</button>
+          </form>
+        </div>
+     
+      </section>
+  
+      
+  
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="main.js"></script>
+   
+
+  <!-- <script>
+    var menulist = document.getElementById('menulist');
+    menulist.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "100vh";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+  </script> -->
+
+<!-- 
+  <section class="home" >
+    <div class="content">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="images/banner-1.png" alt="">
+          <div class="text" >
+            <h1>Spend Your Holiday</h1>
+            <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/banner-2.png" alt="">
+          <div class="text">
+            <h1>Spend Your Holiday</h1>
+            <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../Assets/assets/banner-3.png" alt="">
+          <div class="text">
+            <h1>Spend Your Holiday</h1>
+            <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script> -->
+
+
+
+
+ 
+
+
+
+  <section class="about top">
+    <div class="container flex">
+      <div class="left">
+        <div class="heading">
+          <h1>EXPLORE</h1>
+          <h2>City Hotel</h2>
+        </div>
+        <p>Explore exciting investment opportunities in real estate and job market sectors. Our platform offers detailed insights and options for investors looking to make informed decisions and maximize their returns. Learn more about how you can get involved and benefit from our growth</p>
+        <button class="primary-btn">ABOUT US</button>
+      </div>
+      <div class="right">
+        <img src="../Assets/hotelimg/about.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="counter top">
+    <div class="container grid">
+      <div class="box">
+        <h1>2500</h1>
+        <hr>
+        <span>Customer</span>
+      </div>
+      <div class="box">
+        <h1>1250</h1>
+        <hr>
+        <span>Happy Customer</span>
+      </div>
+      <div class="box">
+        <h1>150</h1>
+        <hr>
+        <span>Expert Technicians</span>
+      </div>
+      <div class="box">
+        <h1>3550</h1>
+        <hr>
+        <span>Desktop Reaired</span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 40,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2,
+          margin: 10,
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script> -->
+
+
+
+
+
+
+  <!-- <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 4,
+        },
+        1000: {
+          items: 6
+        }
+      }
+    })
+  </script> -->
+
+
+  <section class="services top">
+    <div class="container">
+      <div class="heading">
+        <h1>SERVICES</h1>
+        <h2>Our Services</h2>
+        <p class="section__header">Convenience at your fingertips ,So stay connected, anytime and anywhere
+      </div>
+
+
+      <div class="content flex_space">
+        <div class="left grid2">
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <h3>Delious Food</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-person-biking"></i>
+              <h3>Fintness</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Inhouse Restaurant</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-spa"></i>
+              <h3>Beauty Spa</h3>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="../Assets/hotelimg/service.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="news top rooms">
+    <div class="container">
+      <div class="heading">
+        <h1>NEWS</h1>
+        <h2>Our News</h2>
+        <p class="section__header">Invest in your future with us</p>
+      </div>
+
+
+      <div class="content flex">
+        <div class="left grid2">
+          <div class="items">
+            <div class="image">
+              <img src="../Assets/hotelimg/o3.jpg" alt="">
+            </div>
+            <div class="text">
+              <h2>Finibus bonorum malorm.</h2>
+              <div class="admin flex">
+                <i class="fa fa-user"></i>
+                <label>Admin</label>
+                <i class="fa fa-heart"></i>
+                <label>500</label>
+                <i class="fa fa-comments"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="../Assets/hotelimg/o2.jpg" alt="">
+            </div>
+            <div class="text">
+              <h2>Finibus bonorum malorm.</h2>
+              <div class="admin flex">
+                <i class="fa fa-user"></i>
+                <label>Admin</label>
+                <i class="fa fa-heart"></i>
+                <label>500</label>
+                <i class="fa fa-comments"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="box flex">
+            <div class="img">
+              <img src="../Assets/hotelimg/room-6.png" alt="">
+            </div>
+            <div class="stext">
+              <h2>Etiam Vel Nequ</h2>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+            </div>
+          </div>
+          <div class="box flex">
+            <div class="img">
+              <img src="../Assets/hotelimg/gallery-2.png" alt="">
+            </div>
+            <div class="stext">
+              <h2>Etiam Vel Nequ</h2>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+            </div>
+          </div>
+          <div class="box flex">
+            <div class="img">
+              <img src="../Assets/hotelimg/room-2.png" alt="">
+            </div>
+            <div class="stext">
+              <h2>Etiam Vel Nequ</h2>
+              <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="newsletter mtop">
+    <div class="container flex_space">
+      <h1>Subscribe to Our Newsletter</h1>
+      <input type="text" placeholder="Your Email">
+      <input type="text" value="Subscribe">
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container grid">
+      <div class="box">
+        <img src="images/logo-2.png" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="icon">
+          <i class="fa fa-facebook-f"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-youtube"></i>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Links</h2>
+        <ul>
+          <li>Company History</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Services</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+        </p>
+        <i class="fa fa-location-dot"></i>
+        <label>1201 park street, Avenue, Dhanmondy, Dhaka. </label> <br>
+        <i class="fa fa-phone"></i>
+        <label>[88] 657 524 332</label> <br>
+        <i class="fa fa-envelope"></i>
+        <label>info@dentar.com</label> <br>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal">
+    <p class="container">Copyright 2024 Copyright Holder All Rights Reserved.JoshuaMOMO</p>
+  </div>
+
+
+
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
